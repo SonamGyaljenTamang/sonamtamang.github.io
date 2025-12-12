@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <header class="wrap">
+  <header class="wrap" id="top">
     <nav class="nav">
       <a class="brand" href="#top">Sonam Tamang</a>
       <div class="links">
@@ -20,86 +20,164 @@
       </div>
     </nav>
 
-    <section class="hero" id="top">
-      <h1>Sonam Gyaljen Tamang</h1>
-      <p class="subtitle">
-        PhD candidate / Researcher at KIT — Electrochemical Technologies (Electrocatalysis).
-      </p>
-      <div class="cta">
-        <a class="btn" href="#contact">Get in touch</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/sonam-gyaljen-tamang/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="btn ghost" href="https://www.iam.kit.edu/et/english/mitarbeiter_6397.php" target="_blank" rel="noreferrer">KIT Profile</a>
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <h1>Sonam Gyaljen Tamang</h1>
+          <p class="subtitle">
+            PhD candidate / Researcher at KIT — Electrochemical Technologies (Electrocatalysis).
+          </p>
+
+          <div class="cta">
+            <a class="btn" href="#contact">Get in touch</a>
+
+            <a class="btn ghost" href="https://www.linkedin.com/in/sonam-gyaljen-tamang/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn ghost" href="https://www.iam.kit.edu/et/english/mitarbeiter_6397.php" target="_blank" rel="noreferrer">KIT Profile</a>
+            <a class="btn ghost" href="https://orcid.org/0000-0003-1967-434X" target="_blank" rel="noreferrer">ORCID</a>
+            <a class="btn ghost" href="https://scholar.google.com/citations?user=nJb9cxoAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+          </div>
+
+          <div class="meta">
+            <a href="mailto:gyaljen511@gmail.com">gyaljen511@gmail.com</a>
+            <span>•</span>
+            <a href="#publications">Selected publications</a>
+            <span>•</span>
+            <a href="Sonam_Tamang_CV.pdf" download>CV (PDF)</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h2 class="mini-title">Focus</h2>
+          <ul class="bullets">
+            <li>Electrocatalysis & electrochemical technologies</li>
+            <li>Reaction mechanisms & kinetic analysis</li>
+            <li>Sustainable chemical production</li>
+          </ul>
+
+          <div class="chips">
+            <a class="chip" href="#research">Power-to-X</a>
+            <a class="chip" href="#research">Organic electrosynthesis</a>
+            <a class="chip" href="#research">Raman spectroscopy</a>
+            <a class="chip" href="#research">MATLAB</a>
+          </div>
+        </aside>
       </div>
     </section>
   </header>
 
   <main class="wrap">
     <section id="research" class="card">
-      <h2>Research</h2>
-      <p>
-        I work on electrochemical processes and catalysis. My interests include reaction mechanisms,
-        electrode materials, and process optimization for sustainable chemical production.
-      </p>
+      <div class="section-head">
+        <h2>Research</h2>
+        <p class="muted">A few highlights — replace placeholders with your real projects and links.</p>
+      </div>
 
       <div class="grid">
         <article class="item">
-          <h3>Project / Topic 1</h3>
+          <h3>Kinetic analysis of electrocatalysis</h3>
+          <p class="muted">
+            Microkinetic analysis to identify rate-limiting steps and optimize performance.
+          </p>
           <ul>
-            <li>One-line problem statement.</li>
-            <li>Methods: (e.g., electrochemical testing, EIS, modeling).</li>
-            <li>Outcome: result, publication, or impact.</li>
+            <li>Methods: kinetics, modeling, electrochemical testing</li>
+            <li>Tools: MATLAB (optional), data analysis</li>
+            <li>Outcome: add a paper/figure link</li>
           </ul>
+          <div class="item-links">
+            <a class="link" href="#publications">→ Related paper</a>
+            <a class="link" href="#contact">→ Collaborate</a>
+          </div>
         </article>
 
         <article class="item">
-          <h3>Project / Topic 2</h3>
+          <h3>In-situ / operando characterization</h3>
+          <p class="muted">
+            Track reaction intermediates and catalyst changes under working conditions.
+          </p>
           <ul>
-            <li>What you built/analyzed.</li>
-            <li>Key techniques or instruments.</li>
-            <li>Main takeaway.</li>
+            <li>Techniques: Raman spectroscopy (edit as needed)</li>
+            <li>Goal: mechanism insight + stability improvement</li>
+            <li>Outcome: add a poster or dataset link</li>
           </ul>
+          <div class="item-links">
+            <a class="link" href="#publications">→ Poster/PDF</a>
+            <a class="link" href="#contact">→ Ask a question</a>
+          </div>
         </article>
 
         <article class="item">
-          <h3>Project / Topic 3</h3>
+          <h3>Applied electrochemical processes</h3>
+          <p class="muted">
+            Process optimization for sustainable production and environmental applications.
+          </p>
           <ul>
-            <li>Short description.</li>
-            <li>Your contribution.</li>
-            <li>Link to paper/poster (optional).</li>
+            <li>Electrode materials & process parameters</li>
+            <li>Scale-up thinking & performance metrics</li>
+            <li>Outcome: add an impact sentence</li>
           </ul>
+          <div class="item-links">
+            <a class="link" href="https://www.iam.kit.edu/et/english/mitarbeiter_6397.php" target="_blank" rel="noreferrer">→ Lab</a>
+            <a class="link" href="#contact">→ Contact</a>
+          </div>
         </article>
       </div>
     </section>
 
     <section id="publications" class="card">
-      <h2>Publications</h2>
-      <p>Add your best 3–10 items first. Link to DOI / PDF / Google Scholar.</p>
+      <div class="section-head">
+        <h2>Publications</h2>
+        <p class="muted">
+          Put your best 3–10 items here. Link DOI / PDF / preprint.
+          (Your Google Scholar is linked above.)
+        </p>
+      </div>
+
       <ol class="pubs">
         <li>
           <strong>Paper title</strong> — Authors — Journal/Year.
           <a href="#" target="_blank" rel="noreferrer">DOI</a>
+          <span class="dot">•</span>
+          <a href="#" target="_blank" rel="noreferrer">PDF</a>
         </li>
         <li>
           <strong>Paper title</strong> — Authors — Journal/Year.
-          <a href="#" target="_blank" rel="noreferrer">PDF</a>
+          <a href="#" target="_blank" rel="noreferrer">DOI</a>
         </li>
       </ol>
+
+      <div class="callout">
+        <a class="btn ghost" href="https://scholar.google.com/citations?user=nJb9cxoAAAAJ" target="_blank" rel="noreferrer">
+          View all on Google Scholar
+        </a>
+      </div>
     </section>
 
     <section id="cv" class="card">
-      <h2>CV</h2>
-      <p>
+      <div class="section-head">
+        <h2>CV</h2>
+        <p class="muted">Upload your PDF into this repo and keep the filename exactly the same.</p>
+      </div>
+
+      <div class="cta">
         <a class="btn" href="Sonam_Tamang_CV.pdf" download>Download CV (PDF)</a>
-      </p>
-      <p class="hint">Tip: put your CV PDF in the same folder as this HTML file.</p>
+        <a class="btn ghost" href="https://orcid.org/0000-0003-1967-434X" target="_blank" rel="noreferrer">ORCID</a>
+      </div>
+
+      <p class="hint">Tip: the PDF must be in the same folder as <code>index.html</code>.</p>
     </section>
 
     <section id="contact" class="card">
-      <h2>Contact</h2>
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p class="muted">Fastest way to reach me: email.</p>
+      </div>
+
       <ul class="contact">
-        <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+        <li>Email: <a href="mailto:gyaljen511@gmail.com">gyaljen511@gmail.com</a></li>
         <li>LinkedIn: <a href="https://www.linkedin.com/in/sonam-gyaljen-tamang/" target="_blank" rel="noreferrer">sonam-gyaljen-tamang</a></li>
         <li>KIT: <a href="https://www.iam.kit.edu/et/english/mitarbeiter_6397.php" target="_blank" rel="noreferrer">IAM-ET profile</a></li>
+        <li>ORCID: <a href="https://orcid.org/0000-0003-1967-434X" target="_blank" rel="noreferrer">0000-0003-1967-434X</a></li>
+        <li>Google Scholar: <a href="https://scholar.google.com/citations?user=nJb9cxoAAAAJ" target="_blank" rel="noreferrer">Profile</a></li>
       </ul>
     </section>
 
