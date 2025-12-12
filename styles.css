@@ -1,4 +1,4 @@
-root { --bg:#0b0c10; --card:#12141a; --text:#e7eaf0; --muted:#aab2c0; --line:#232737; }
+:root { --bg:#0b0c10; --card:#12141a; --text:#e7eaf0; --muted:#aab2c0; --line:#232737; }
 * { box-sizing: border-box; }
 body {
   margin:0;
