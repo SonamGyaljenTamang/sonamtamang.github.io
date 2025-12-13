@@ -150,7 +150,7 @@ h2{
 .date{
   background: transparent;
   border: none;
-  padding: 0;
+  padding: 20;
   font-weight: 400;
   color: var(--muted);
 }
@@ -176,8 +176,8 @@ h2{
 }
 
 .icon-btn{
-  width: 66px;
-  height: 66px;
+  width: 86px;
+  height: 86px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
