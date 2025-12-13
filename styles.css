@@ -12,7 +12,6 @@
   --muted:rgba(11,31,38,.65);
 }
 
-/* Base */
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
 
@@ -23,14 +22,14 @@ body{
   color:var(--text);
 }
 
-/* ===== SIDEBAR WIDTH + FULL HEIGHT ===== */
+/* ===== SIDEBAR: width + height adjusted ===== */
 @media (min-width: 992px){
-  body{ padding-left: 300px; }   /* wider */
+  body{ padding-left: 320px; }
   #sideNav{
-    width: 300px;                /* wider */
+    width: 320px;
     position: fixed;
     top: 0; left: 0;
-    height: 100vh;               /* full height */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
@@ -45,20 +44,19 @@ body{
 }
 
 #sideNav .container-fluid{
+  height: 100%;
+  padding: 26px 18px;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  padding-top: 18px;
-  padding-bottom: 18px;
 }
 
 #sideNav .navbar-collapse{
   flex-grow: 1;
   display: flex;
-  align-items: center;
+  align-items: center; /* vertically balanced */
 }
 
-/* Profile image */
+/* Profile photo */
 .profile-img{
   width: 165px;
   height: 165px;
@@ -69,15 +67,15 @@ body{
   margin: 0 auto 18px;
 }
 
-/* ===== NAV LINKS (TEXT ONLY HOVER, NO BOX) ===== */
+/* Nav links: TEXT ONLY hover/active */
 #sideNav .nav-link{
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 
-  color: rgba(255,255,255,.78);
+  color: rgba(255,255,255,.80);
   text-align: center;
-  padding: 8px 0;
+  padding: 10px 0;
   font-weight: 800;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -86,25 +84,23 @@ body{
 
 #sideNav .nav-link:hover{
   color: #ffffff;
-  background: transparent !important;
 }
 
 #sideNav .nav-link.active{
   color: #ffffff;
   text-decoration: underline;
-  text-underline-offset: 6px;
+  text-underline-offset: 7px;
   text-decoration-thickness: 2px;
-  background: transparent !important;
 }
 
 #sideNav .nav-link:focus{ box-shadow:none; }
 
 /* Sections */
 .resume-section{
-  padding: 3.25rem 1.25rem;
+  padding: 3.75rem 1.25rem;
 }
 @media (min-width: 992px){
-  .resume-section{ padding: 4.25rem 3rem; }
+  .resume-section{ padding: 4.75rem 3rem; }
 }
 
 /* Headings */
@@ -119,6 +115,7 @@ h2{
   font-size: clamp(26px, 3vw, 34px);
   font-weight: 900;
 }
+
 .subheading{
   text-transform: uppercase;
   letter-spacing: .14em;
@@ -133,16 +130,23 @@ h2{
 }
 .text-muted{ color: var(--muted) !important; }
 
-/* ===== REMOVE GREY BOXES: cards become colorless ===== */
+/* ===== spacing between content blocks ===== */
 .section-card{
-  background: transparent;      /* no grey/white box */
-  border: none;                 /* no border */
-  border-radius: 0;             /* no curves */
-  padding: 0;                   /* no padding box feel */
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
   box-shadow: none;
+
+  margin: 22px 0;   /* MORE SPACE between blocks */
 }
 
-/* Dates */
+.section-card ul{
+  margin-top: 12px;
+  line-height: 1.75;
+}
+
+/* Dates plain */
 .date{
   background: transparent;
   border: none;
@@ -162,96 +166,48 @@ h2{
   text-underline-offset: 3px;
 }
 
-/* ===== ABOUT ICONS (already like LinkedIn style) ===== */
-.about-icons{
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.about-icons a.icon-btn{
-  width: 56px;
-  height: 56px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0;
-  background: #fff;
-  border: 1px solid rgba(11,31,38,.12);
-  text-decoration: none;
-  transition: background-color .18s ease, color .18s ease;
-}
-
-.about-icons a.icon-btn:hover{
-  background: var(--teal-hover);
-}
-
-.about-icons a.icon-btn i{
-  font-size: 1.7rem;
-  color: var(--teal-active);
-}
-
-.about-icons a.icon-btn:hover i{
-  color: #fff;
-}
-
-/* Buttons */
-.btn{ border-radius: 0 !important; }
-
-.btn-teal{
-  background: var(--teal-active) !important;
-  border: 1px solid rgba(0,0,0,.08) !important;
-  color: #fff !important;
-}
-.btn-teal:hover{
-  background: var(--teal-hover) !important;
-}
-
-/* ===== TOOLS ICONS: make them like About icons ===== */
+/* ===== ICONS: SAME SIZE, COLORLESS, NO BORDER/BOX ===== */
+.about-icons,
 .tools-icons{
   display: flex;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 8px;
 }
 
-.tools-icons .tool{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 0;
-}
-
-.tools-icons .tool .tool-icon{
-  width: 56px;
-  height: 56px;
+.icon-btn{
+  width: 46px;
+  height: 46px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0;
-  background: #fff;
-  border: 1px solid rgba(11,31,38,.12);
-  transition: background-color .18s ease, color .18s ease;
+  padding: 0;
+
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  text-decoration: none;
 }
 
-.tools-icons .tool .tool-icon i{
-  font-size: 1.7rem;            /* match About icon size */
+.icon-btn i{
+  font-size: 1.7rem;               /* same size everywhere */
   color: var(--teal-active);
+  transition: color .18s ease;
 }
 
-.tools-icons .tool:hover .tool-icon{
-  background: var(--teal-hover);
+.icon-btn:hover i{
+  color: var(--teal-hover);
 }
 
-.tools-icons .tool:hover .tool-icon i{
-  color: #fff;
-}
-
-.tools-icons .tool span{
+/* Download CV link: main color, no underline */
+.cv-link{
   color: var(--text);
-  font-weight: 650;
+  text-decoration: none !important;
+  font-weight: 600;
+}
+.cv-link:hover{
+  color: var(--teal-hover);
+  text-decoration: none !important;
 }
 
 /* Footer */
@@ -263,5 +219,10 @@ h2{
 
 /* Mobile */
 @media (max-width: 920px){
-  #sideNav{ position: sticky; top: 0; z-index: 50; height: auto; }
+  #sideNav{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    height: auto;
+  }
 }
