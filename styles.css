@@ -181,7 +181,7 @@ h2{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 5;
 
   background: transparent !important;
   border: none !important;
@@ -190,7 +190,7 @@ h2{
 }
 
 .icon-btn i{
-  font-size: 3.6rem;               /* same size everywhere */
+  font-size: 3.0rem;               /* same size everywhere */
   color: var(--teal-active);
   transition: color .18s ease;
 }
