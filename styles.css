@@ -190,7 +190,7 @@ h2{
 }
 
 .icon-btn i{
-  font-size: 1.7rem;               /* same size everywhere */
+  font-size: 2.2rem;               /* same size everywhere */
   color: var(--teal-active);
   transition: color .18s ease;
 }
