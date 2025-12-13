@@ -135,7 +135,7 @@ h2{
   background: transparent;
   border: none;
   border-radius: 0;
-  padding: 10;
+  padding: 0;
   box-shadow: none;
 
   margin: 22px 0;   /* MORE SPACE between blocks */
@@ -150,7 +150,7 @@ h2{
 .date{
   background: transparent;
   border: none;
-  padding: 20;
+  padding: 0;
   font-weight: 400;
   color: var(--muted);
 }
