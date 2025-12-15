@@ -1,420 +1,305 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sonam Tamang</title>
-  <meta
-    name="description"
-    content="Personal website of Sonam Gyaljen Tamang — electrochemical technologies, organic electrosynthesis, Power-to-X, and environmental remediation."
-  />
+:root{
+  --bg:#ffffff;
+  --text:#0B1F26;
 
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  /* Deep teal */
+  --teal:#063A3A;
+  --teal-hover:#0A4B4B;
+  --teal-active:#0E6663;
 
-  <!-- Bootstrap 5 -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+  --white:#ffffff;
+  --white-soft:rgba(255,255,255,.86);
+  --muted:rgba(11,31,38,.65);
+}
 
-  <!-- Font Awesome 6 -->
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    rel="stylesheet"
-  />
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css" />
-</head>
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
 
-<body id="page-top">
-  <!-- ================= SIDEBAR ================= -->
-  <nav class="navbar navbar-expand-lg navbar-dark sidebar-nav" id="sideNav">
-    <div class="container-fluid flex-lg-column align-items-lg-center">
-      <a class="navbar-brand text-center w-100" href="#page-top">
-        <span class="d-block d-lg-none">Sonam Tamang</span>
-        <span class="d-none d-lg-block mt-3">
-          <img
-            src="profile.jpeg"
-            alt="Sonam Gyaljen Tamang"
-            class="profile-img mb-3"
-          />
-        </span>
-      </a>
+/* ===== SIDEBAR (DESKTOP) ===== */
+@media (min-width: 992px){
+  body{ padding-left: 320px; }
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  #sideNav{
+    width: 320px;
+    position: fixed;
+    top: 0; left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+}
 
-      <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
-        <ul class="navbar-nav flex-column w-100">
-          <li class="nav-item"><a class="nav-link active" href="#about">ABOUT</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">EXPERIENCE</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">EDUCATION</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">SKILLS</a></li>
-          <li class="nav-item"><a class="nav-link" href="#awards">AWARDS</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">PROJECTS</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://scholar.google.com/citations?user=nJb9cxoAAAAJ" target="_blank" rel="noreferrer">PUBLICATIONS</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://www.blogger.com/blog/posts/4191852842107645398?hl=en&tab=jj" target="_blank" rel="noreferrer">BLOG</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+.sidebar-nav{
+  background: var(--teal) !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
 
-<!-- ================= MAIN CONTENT ================= -->
-<main class="container-fluid p-0">
-  <!-- About -->
-  <section class="resume-section" id="about">
-    
-    <h0 class="mb-2">SONAM GYALJEN TAMANG</h0>
+#sideNav .container-fluid{
+  height: 100%;
+  padding: 26px 18px;
+  display: flex;
+  flex-direction: column;
+}
 
-    <div class="subheading mb-4">
-      Karlsruhe, Germany ·
-      <a href="mailto:gyaljen511@gmail.com" class="link-primary">
-        gyaljen511@gmail.com
-      </a>
-    </div>
+#sideNav .navbar-collapse{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
 
-<p class="lead-muted mb-4">
-  I am a forward-thinking <strong>research leader</strong> and <strong>PhD Candidate</strong> at the
-  <strong>Karlsruhe Institute of Technology (KIT)</strong>, Institute for Applied Materials –
-  <strong>Electrochemical Technologies (IAM-ET)</strong>, where I drive innovation in
-  <strong>electrocatalysis</strong> and <strong>power-to-chemical systems</strong>. My work focuses on
-  <strong>microkinetic reaction modeling</strong> and the design of
-  <strong>sustainable electrochemical processes</strong> that directly contribute to
-  <strong>next-generation energy-transition technologies</strong>.
-</p>
+/* Profile photo */
+.profile-img{
+  width: 165px;
+  height: 165px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,.18);
+  display: block;
+  margin: 0 auto 18px;
+}
 
-<p class="lead-muted mb-4">
-  With a strong foundation in <strong>engineering and applied sciences</strong>, I bridge
-  <strong>fundamental electrochemical theory</strong> with
-  <strong>scalable technological solutions</strong>. My research portfolio reflects a
-  <strong>strategic, execution-focused mindset</strong>, spanning
-  <strong>interdisciplinary and international collaborations</strong> in
-  <strong>electrochemistry</strong>, <strong>plasma-assisted technologies</strong>, and
-  <strong>environmental remediation</strong>.
-</p>
-    </p>
+/* Nav links */
+#sideNav .nav-link{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 
-    <!-- Icons -->
-    <div class="about-icons mb-4">
-      <a
-        class="icon-btn"
-        href="https://www.linkedin.com/in/sonam-gyaljen-tamang/"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="LinkedIn"
-      >
-        <i class="fa-brands fa-linkedin-in"></i>
-      </a>
-      <a
-        class="icon-btn"
-        href="https://orcid.org/0000-0003-1967-434X"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="ORCID"
-      >
-        <i class="fa-brands fa-orcid"></i>
-      </a>
-      <a
-        class="icon-btn"
-        href="https://scholar.google.com/citations?user=nJb9cxoAAAAJ"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Google Scholar"
-      >
-        <i class="fa-solid fa-graduation-cap"></i>
-      </a>
-    </div>
+  color: rgba(255,255,255,.80);
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  transition: color .2s ease;
+}
 
-    <!-- CV Download (placed lower) -->
-    <div class="mt-4">
-      <a class="cv-link" href="files/Sonam_Tamang_CV.pdf" download>
-        Download CV (PDF)
-      </a>
-    </div>
+#sideNav .nav-link:hover{ color:#fff; }
 
-  </section>
+#sideNav .nav-link.active{
+  color:#fff;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 2px;
+}
 
-  <hr class="m-0" />
-</main>
+#sideNav .nav-link:focus{ box-shadow:none; }
 
+/* Sections */
+.resume-section{
+  padding: 2.25rem 1.25rem 3.75rem;
+}
+@media (min-width: 992px){
+  .resume-section{
+    padding: 3rem 3rem 4.75rem;
+  }
+}
 
-    <!-- Experience -->
-    <section class="resume-section" id="experience">
-      <h2 class="mb-3">EXPERIENCE</h2>
+/* Headings */
+h0{
+  font-size: clamp(50px, 6.2vw, 56px);
+  margin: 0 0 10px;
+  letter-spacing: -0.4px;
+  font-weight: 900;
+  display:block;
+}
 
-      <div class="section-card">
-        <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
-          <div>
-            <div class="subheading mb-1">Research Associate</div>
-            <h3 class="h4 mb-1">Karlsruhe Institute of Technology (KIT)</h3>
-            <div class="text-muted">Karlsruhe, Germany</div>
-            <ul class="mt-3 mb-0">
-              <li>Microkinetic analysis of anodic oxidation and methoxylation of hydrocarbons</li>
-              <li>EET laboratory instructor on electrolysis</li>
-              <li>Institute seminar and student thesis organizer</li>
-            </ul>
-          </div>
-          <div class="text-md-end">
-            <span class="date">10/2023 – Present</span>
-          </div>
-        </div>
-      </div>
+h1{
+  font-size: clamp(30px, 4.2vw, 46px);
+  margin: 0 0 10px;
+  letter-spacing: -0.4px;
+  font-weight: 900;
+}
+h2{
+  margin: 0 0 12px;
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 900;
+}
 
-      <div class="section-card">
-        <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
-          <div>
-            <div class="subheading mb-1">Student Assistant</div>
-            <h3 class="h4 mb-1">Fraunhofer IGB</h3>
-            <div class="text-muted">Stuttgart, Germany</div>
-            <ul class="mt-3 mb-0">
-              <li>Performed adsorption experiments</li>
-              <li>Prepared and ran shadowgraph experiments for various samples</li>
-              <li>Assisted Interfacial Engineering &amp; Material Science (80% lab / 20% office)</li>
-            </ul>
-          </div>
-          <div class="text-md-end">
-            <span class="date">12/2022 – 03/2023</span>
-          </div>
-        </div>
-      </div>
+.subheading{
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: rgba(11,31,38,.75);
+  font-weight: 800;
+}
 
-      <div class="section-card">
-        <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
-          <div>
-            <div class="subheading mb-1">Student Assistant</div>
-            <h3 class="h4 mb-1">SRH Hochschule Heidelberg</h3>
-            <div class="text-muted">Heidelberg, Germany</div>
-            <ul class="mt-3 mb-0">
-              <li>Research assistant on plasma technology as AOPs for micropollutant removal (methylene blue, carbamazepine)</li>
-              <li>Applied humic substances for micropollutant and heavy metal removal</li>
-              <li>Image processing of microplastics and live/dead microorganisms</li>
-              <li>Supported digital ideas on the Democratia-Aqua-Technica project</li>
-            </ul>
-          </div>
-          <div class="text-md-end">
-            <span class="date">06/2021 – 10/2022</span>
-          </div>
-        </div>
-      </div>
-    </section>
+.lead-muted{
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
 
-    <hr class="m-0" />
+.text-muted{ color: var(--muted) !important; }
 
-    <!-- Education -->
-    <section class="resume-section" id="education">
-      <h2 class="mb-3">EDUCATION</h2>
+/* spacing between content blocks */
+.section-card{
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  margin: 22px 0;
+}
 
-      <div class="section-card">
-        <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
-          <div>
-            <div class="subheading mb-1">PhD Candidate — Electrochemical Engineering Technology</div>
-            <h3 class="h4 mb-1">Karlsruhe Institute of Technology (KIT)</h3>
-            <div class="text-muted">Karlsruhe, Germany</div>
-          </div>
-          <div class="text-md-end">
-            <span class="date">2023 – Present</span>
-          </div>
-        </div>
-      </div>
+.section-card ul{
+  margin-top: 12px;
+  line-height: 1.75;
+}
 
-      <div class="section-card">
-        <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
-          <div>
-            <div class="subheading mb-1">Master’s in Water Technology</div>
-            <h3 class="h4 mb-1">SRH Hochschule Heidelberg</h3>
-            <div class="text-muted">Heidelberg, Germany</div>
-          </div>
-          <div class="text-md-end">
-            <span class="date">2021 – 2023</span>
-          </div>
-        </div>
-      </div>
+/* Dates plain */
+.date{
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-weight: 400;
+  color: var(--muted);
+}
 
-      <div class="section-card">
-        <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
-          <div>
-            <div class="subheading mb-1">Bachelor of Electrical Engineering</div>
-            <h3 class="h4 mb-1">Kathmandu Engineering College</h3>
-            <div class="text-muted">Kalimati, Kathmandu</div>
-          </div>
-          <div class="text-md-end">
-            <span class="date">2014 – 2018</span>
-          </div>
-        </div>
-      </div>
-    </section>
+/* Links */
+.link-primary{
+  color: var(--teal-active) !important;
+  text-decoration: none;
+}
+.link-primary:hover{
+  color: var(--teal-hover) !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
-    <hr class="m-0" />
+/* ICONS */
+.about-icons,
+.tools-icons{
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-    <!-- Skills -->
-    <section class="resume-section" id="skills">
-      <h2 class="mb-3">SKILLS</h2>
+.icon-btn{
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 
-<div class="section-card">
-  <div class="subheading mb-2">Tools &amp; Software</div>
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  text-decoration: none;
+}
 
-  <div class="about-icons mb-3 d-flex flex-wrap gap-4">
-    
-    <div class="text-center">
-      <a class="icon-btn" href="#" aria-label="GitHub">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <span class="d-block mt-1 small">GitHub</span>
-    </div>
+.icon-btn i{
+  font-size: 2.6rem;
+  color: var(--teal-active);
+  transition: color .18s ease;
+}
 
-    <div class="text-center">
-      <a class="icon-btn" href="#" aria-label="Python">
-        <i class="fa-brands fa-python"></i>
-      </a>
-      <span class="d-block mt-1 small">Python</span>
-    </div>
+.icon-btn:hover i{ color: var(--teal-hover); }
 
-    <div class="text-center">
-      <a class="icon-btn" href="#" aria-label="Origin">
-        <i class="fa-solid fa-chart-line"></i>
-      </a>
-      <span class="d-block mt-1 small">Origin</span>
-    </div>
+/* Download CV link */
+.cv-link{
+  color: var(--text);
+  text-decoration: none !important;
+  font-weight: 600;
+}
+.cv-link:hover{
+  color: var(--teal-hover);
+  text-decoration: none !important;
+}
 
-    <div class="text-center">
-      <a class="icon-btn" href="#" aria-label="Gamry">
-        <i class="fa-solid fa-wave-square"></i>
-      </a>
-      <span class="d-block mt-1 small">Gamry</span>
-    </div>
+/* Footer */
+.footer{
+  padding: 14px 0 26px;
+  color: var(--muted);
+  text-align: center;
+}
 
-    <div class="text-center">
-      <a class="icon-btn" href="#" aria-label="Design-Expert">
-        <i class="fa-solid fa-flask"></i>
-      </a>
-      <span class="d-block mt-1 small">Design-Expert</span>
-    </div>
+/* ================= MOBILE: hamburger + slide-in drawer ================= */
+@media (max-width: 920px){
 
-    <div class="text-center">
-      <a class="icon-btn" href="#" aria-label="Minitab">
-        <i class="fa-solid fa-chart-column"></i>
-      </a>
-      <span class="d-block mt-1 small">Minitab</span>
-    </div>
+  #sideNav{
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    width: 100%;
+    height: auto;
+    background: var(--teal) !important;
+  }
 
-  </div>
-</div>
+  #sideNav .container-fluid{
+    padding: 12px 14px;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
 
+  /* hamburger */
+  #sideNav .navbar-toggler{
+    border: 0;
+    box-shadow: none !important;
+    padding: 8px 10px;
+  }
+  #sideNav .navbar-toggler:focus{ box-shadow:none; }
 
-      <div class="section-card">
-        <div class="subheading mb-2">Experienced In</div>
-        <ul class="mb-0">
-          <li>Kinetic modelling and simulation</li>
-          <li>Electrochemical analysis (CV, EIS)</li>
-          <li>Organic electrosynthesis</li>
-          <li>Advanced Oxidation Processes (cold plasma, Ozone/H₂O₂, UV/H₂O₂)</li>
-          <li>Frugal innovation &amp; humanitarian engineering</li>
-          <li>PFAS / PFCs</li>
-          <li>Microplastics</li>
-          <li>C / C++, Arduino</li>
-        </ul>
-      </div>
-    </section>
+  /* drawer panel */
+  #sideNav .navbar-collapse{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: min(320px, 85vw);   /* ✅ not full screen */
+    background: var(--teal);
+    padding: 80px 18px 18px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 
-    <hr class="m-0" />
+    transform: translateX(-105%);
+    transition: transform 260ms ease;
+    z-index: 1060;
 
-    <!-- Awards -->
-    <section class="resume-section" id="awards">
-      <h2 class="mb-3">AWARDS &amp; CERTIFICATES</h2>
+    align-items: flex-start; /* override desktop centering */
+  }
 
-      <div class="section-card">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-2">
-          <div>
-            <h3 class="h5 mb-1">SRH Stipendium Award</h3>
-            <div class="text-muted">SRH Hochschule Heidelberg</div>
-          </div>
-          <div class="text-md-end">
-            <span class="date">Oct 2021</span>
-          </div>
-        </div>
-      </div>
-    </section>
+  #sideNav .navbar-collapse.show{
+    transform: translateX(0);
+  }
 
-    <hr class="m-0" />
+  #sideNav .nav-link{
+    text-align: left;
+    padding: 12px 8px;
+  }
 
-    <!-- Projects -->
-    <section class="resume-section" id="projects">
-      <h2 class="mb-3">PROJECTS</h2>
-      <p class="lead-muted mb-4">A few projects across research and applied environmental engineering.</p>
+  /* backdrop */
+  body::before{
+    content:"";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+    z-index: 1055;
+  }
+  body.nav-open::before{
+    opacity: 1;
+    pointer-events: auto;
+  }
 
-      <div class="section-card">
-        <h3 class="h4 mb-2">Master's Thesis — PFAS/PFCs groundwater treatment</h3>
-        <p class="text-muted mb-0">
-          Atmospheric plasma technology for PFAS/PFCs-contaminated groundwater (Fraunhofer IGB, Stuttgart).
-        </p>
-      </div>
-
-      <div class="section-card">
-        <h3 class="h4 mb-2">YIP-Aqua-I — Wetland &amp; filtration concept</h3>
-        <p class="text-muted mb-0">
-          Proposed an initial wetland + filtration design (UNIVA Mexico &amp; SRH Heidelberg).
-        </p>
-      </div>
-
-      <div class="section-card">
-        <h3 class="h4 mb-2">Microplastics degradation via AOPs</h3>
-        <p class="text-muted mb-0">
-          Compared UV/H₂O₂, Ozone/H₂O₂, and non-thermal plasma for LDPE microplastic degradation.
-        </p>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <small>© <span id="y"></span> Sonam Gyaljen Tamang</small>
-    </footer>
-  </main>
-
-  <!-- Bootstrap 5 bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    (function () {
-      // Footer year
-      const yearEl = document.getElementById("y");
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-      // Active link highlight
-      const nav = document.getElementById("sideNav");
-      const links = nav ? nav.querySelectorAll(".nav-link") : [];
-
-      function setActiveLink(target) {
-        links.forEach((l) => l.classList.remove("active"));
-        target.classList.add("active");
-      }
-
-      links.forEach((link) => {
-        link.addEventListener("click", function () {
-          setActiveLink(this);
-        });
-      });
-
-      // Close mobile menu after click
-      const navCollapse = document.getElementById("navbarSupportedContent");
-      const collapseApi = navCollapse ? bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false }) : null;
-
-      document.querySelectorAll("#navbarSupportedContent .nav-link").forEach((link) => {
-        link.addEventListener("click", () => {
-          if (navCollapse && navCollapse.classList.contains("show") && collapseApi) {
-            collapseApi.hide();
-          }
-        });
-      });
-    })();
-  </script>
-</body>
-</html>
+  body.nav-open{
+    overflow: hidden;
+  }
+}
