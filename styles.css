@@ -257,22 +257,21 @@ h2{
 
   /* drawer panel */
   #sideNav .navbar-collapse{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: min(320px, 85vw);   /* ✅ not full screen */
-    background: var(--teal);
-    padding: 80px 18px 18px;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+  position: fixed;
+  top: 0;
+  right: 0;                 /* ✅ move to right */
+  height: 100vh;
+  width: min(320px, 85vw);
+  background: var(--teal);
+  padding: 80px 18px 18px;
+  overflow-y: auto;
 
-    transform: translateX(-105%);
-    transition: transform 260ms ease;
-    z-index: 1060;
+  transform: translateX(105%);   /* ✅ hide off right */
+  transition: transform 260ms ease;
+  z-index: 1060;
 
-    align-items: flex-start; /* override desktop centering */
-  }
+  align-items: flex-start;
+}
 
   #sideNav .navbar-collapse.show{
     transform: translateX(0);
