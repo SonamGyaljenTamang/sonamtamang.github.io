@@ -231,21 +231,41 @@ h2{
 }
 
 /* Mobile */
-@media (max-width: 920px) {
-  #sideNav {
-    position: sticky;
-    top: 0;
-    z-index: 50;
+<script>
+  (function () {
+    const navCollapse = document.getElementById("navbarSupportedContent");
+    if (!navCollapse) return;
 
-    width: 100%;
-    height: auto;
+    // When menu opens/closes (Bootstrap collapse events)
+    navCollapse.addEventListener("shown.bs.collapse", () => {
+      document.body.classList.add("nav-open");
+    });
+    navCollapse.addEventListener("hidden.bs.collapse", () => {
+      document.body.classList.remove("nav-open");
+    });
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    // Close when tapping backdrop
+    document.addEventListener("click", (e) => {
+      if (!document.body.classList.contains("nav-open")) return;
 
-    padding: 0.75rem 1rem;
-    background-color: #fff;
-  }
-}
+      const panel = navCollapse;
+      const toggler = document.querySelector("#sideNav .navbar-toggler");
+
+      // click outside panel & not on toggler
+      if (!panel.contains(e.target) && !toggler.contains(e.target)) {
+        const api = bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false });
+        api.hide();
+      }
+    });
+
+    // ESC to close
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && document.body.classList.contains("nav-open")) {
+        const api = bootstrap.Collapse.getOrCreateInstance(navCollapse, { toggle: false });
+        api.hide();
+      }
+    });
+  })();
+</script>
+
 
