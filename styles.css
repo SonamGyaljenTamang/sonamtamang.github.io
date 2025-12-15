@@ -231,11 +231,21 @@ h2{
 }
 
 /* Mobile */
-@media (max-width: 920px){
-  #sideNav{
+@media (max-width: 920px) {
+  #sideNav {
     position: sticky;
     top: 0;
     z-index: 50;
+
+    width: 100%;
     height: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 0.75rem 1rem;
+    background-color: #fff;
   }
 }
+
